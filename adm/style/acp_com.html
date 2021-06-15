@@ -1,0 +1,85 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_VK_BB}<!-- IF VK_VERSION --> <span style="font-size:0.6em;">v. {VK_VERSION}</span><!-- ENDIF --> / <a href="http://hello-vitebsk.ru/viewtopic.php?f=208&t=2761">FAQ</a></h1>
+
+<form id="acp_com" method="post" action="{U_ACTION}">
+	<fieldset>
+		<legend>{L_VK_COM}</legend>
+		<dl>
+			{L_VK_COM_EXP}<br/>{L_VK_RUL}
+			</dl>
+<dl>
+			<dt><label for="vkbb_com_on">{L_VK_COM_ON}</label><br /><span>{L_VK_COM_ON_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_com_on" value="1" id="vkbb_com_on"<!-- IF VKBB_COM_ON --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="vkbb_com_on" value="0" <!-- IF not VKBB_COM_ON --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+</dl>
+<dl>
+			<dt><label for="vkbb_com_on_i">{L_VK_COM_I_ON}</label><br /><span>{L_VK_COM_ON_I_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_com_on_i" value="1" id="vkbb_com_on_i"<!-- IF VKBB_COM_ON_I --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="vkbb_com_on_i" value="0" <!-- IF not VKBB_COM_ON_I --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+</dl>
+<dl>
+			<dt><label for="vkbb_com_i_p">{L_VK_COM_I_P}</label><br /><span>{L_VK_COM_I_P_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_com_i_p" value="1" id="vkbb_com_i_p"<!-- IF VKBB_COM_I_P --> checked="checked"<!-- ENDIF -->/> {L_VK_REC_P_B}</label>
+				<label><input type="radio" class="radio" name="vkbb_com_i_p" value="0" <!-- IF not VKBB_COM_I_P --> checked="checked"<!-- ENDIF --> /> {L_VK_REC_P_A}</label>
+			</dd>
+</dl> 		
+<dl>
+			<dt><label for="vkbb_com_h">{L_VK_COM_H}</label><br /><span>{L_VK_COM_H_EXP}</span></dt>
+			<dd><input type="number" id="vkbb_com_h" required  name="vkbb_com_h" size="30" value="{VKBB_COM_H}" /></dd>
+</dl> 		
+<dl>
+			<dt><label for="vkbb_com_k">{L_VK_COM_K}</label><br /><span>{L_VK_COM_K_EXP}</span></dt>
+			<dd><input type="number" id="vkbb_com_k" min="5" max="100" name="vkbb_com_k" size="30" value="{VKBB_COM_K}" /></dd>
+</dl>			
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_VK_COM_TOP}</legend>
+		<dl>
+			{L_VK_RUL}
+			</dl>
+<dl>
+			<dt><label for="vkbb_top_on_c">{L_VK_COM_TOP_O}</label><br /><span>{L_VK_COM_TOP_O_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_top_on_c" value="1" id="vkbb_top_on_c"<!-- IF VKBB_TOP_ON_C --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="vkbb_top_on_c" value="0" <!-- IF not VKBB_TOP_ON_C --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+</dl> 
+<dl>
+			<dt><label for="vkbb_top_p_c">{L_VK_COM_TOP_PO}</label><br /><span>{L_VK_COM_TOP_PO_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_top_p_c" value="1" id="vkbb_top_p_c"<!-- IF VKBB_TOP_P_C --> checked="checked"<!-- ENDIF -->/> {L_VK_REC_P_B}</label>
+				<label><input type="radio" class="radio" name="vkbb_top_p_c" value="0" <!-- IF not VKBB_TOP_P_C --> checked="checked"<!-- ENDIF --> /> {L_VK_REC_P_A}</label>
+			</dd>
+</dl> 
+<dl>
+			<dt><label for="vkbb_top_d_c">{L_VK_COM_DAT}</label><br /><span>{L_VK_COM_DAT_EXP}</span></dt>
+			<dd><input type="text" list="datt" id="vkbb_top_d_c"  name="vkbb_top_d_c" size="30" autocomplete="off" value="{VKBB_TOP_D_C}" />
+			<datalist id="datt">
+    <option>day</option>
+    <option>week</option>
+    <option>month</option>
+    <option>alltime</option>
+   </datalist> </dd>
+</dl> 		
+<dl>
+			<dt><label for="vkbb_top_k_c">{L_VK_COM_NUMB}</label><br /><span>{L_VK_COM_NUMB_EXP}</span></dt>
+			<dd><input type="number" id="vkbb_top_k_c" min="10" max="200" name="vkbb_top_k_c" size="30" value="{VKBB_TOP_K_C}" /></dd>
+</dl>
+</fieldset>
+	<fieldset>
+		<legend>{L_ACP_SUBMIT_CHANGES}</legend>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+<!-- INCLUDE overall_footer.html -->

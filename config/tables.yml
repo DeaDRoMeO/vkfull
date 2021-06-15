@@ -1,0 +1,3 @@
+parameters:
+    deadromeo.vkfull.table.vk_postwall: %core.table_prefix%vk_postwall
+    deadromeo.vkfull.table.vk_poll: %core.table_prefix%vk_poll

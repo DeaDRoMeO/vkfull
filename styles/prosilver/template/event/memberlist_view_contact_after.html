@@ -1,0 +1,60 @@
+	<!-- IF PROFILE_VKBB_PROFILE_VALUE -->
+	<div class="panel bg1">
+	<div class="inner">
+<h3>{L_STATVK}</h3>
+<div class="flex-container">
+	<div class="flex-item">
+		<dl class="details">
+		<dt>{L_VK_ALB}</dt> <dd>{VK_ALB}</dd>
+		<dt>{L_VK_VID}</dt> <dd>{VK_VID}</dd>
+		<dt>{L_VK_AUD}</dt> <dd>{VK_AUD}</dd>
+		</dl>
+	</div>
+
+	<div class="flex-item">
+		<dl class="details">
+		<dt>{L_VK_PHOT}</dt> <dd>{VK_PHOT}</dd>
+		<dt>{L_VK_FREN}</dt> <dd>{VK_FREN}</dd>
+		<dt>{L_VK_GROUP}</dt> <dd>{VK_GROUP}</dd>
+		</dl>
+	</div>
+	<div class="flex-item">
+		<dl class="details">
+		<dt>{L_VK_FOLLL}</dt> <dd>{VK_FOLLL}</dd>
+		<dt>{L_VK_SUBS}</dt> <dd>{VK_SUBS}</dd>
+		<dt>{L_VK_PAGE}</dt> <dd>{VK_PAGE}</dd>
+		</dl>
+	</div>
+</div>
+<br>
+<div>
+<h3>{L_VK_FR} ({L_ALL_ALL} {FR})</h3>
+<div class="flex-container">
+	<!-- BEGIN vkwigets_m -->
+		<div class="flex-item2"><a href="https://vk.com/id{vkwigets_m.VK_IDS}"><div class="vk_info_user"><div class="vk_info_user_photo">{vkwigets_m.VK_PHOTO}</div> <div class="vk_info">{vkwigets_m.VK_FIRSTNAME} {vkwigets_m.VK_LASTNAME}<!-- IF vkwigets_m.VK_CITY --><br/>{vkwigets_m.VK_CITY}<!-- ENDIF --><!-- IF vkwigets_m.VK_CCITY --><br/>{vkwigets_m.VK_CCITY}<!-- ENDIF --></div></div></a></div>
+	<!-- BEGINELSE -->
+		<div class="flex-item2">{L_NO_FR}</div>
+	<!-- END vkwigets_m -->
+</div>		
+<br>
+<h3>{L_VK_FOL} ({L_ALL_ALL} {FOL})</h3>
+<div class="flex-container">
+	<!-- BEGIN vkwigets_fol -->
+		<div class="flex-item2"><a href="https://vk.com/id{vkwigets_fol.VK_IDS}"><div class="vk_info_user"><div class="vk_info_user_photo">{vkwigets_fol.VK_PHOTO}</div> <div class="vk_info">{vkwigets_fol.VK_FIRSTNAME} {vkwigets_fol.VK_LASTNAME}<!-- IF vkwigets_fol.VK_CITY --><br/>{vkwigets_fol.VK_CITY}<!-- ENDIF --><!-- IF vkwigets_fol.VK_CCITY --><br/>{vkwigets_fol.VK_CCITY}<!-- ENDIF --></div></div></a></div>
+	<!-- BEGINELSE -->
+		<div class="flex-item2">{L_NO_FOL}</div>
+	<!-- END vkwigets_fol -->
+</div>
+<br>
+<h3>{L_VK_GR} ({L_ALL_ALL} {GR})</h3>
+<div class="flex-container">
+	<!-- BEGIN vkwigets_g -->
+		<div class="flex-item2"><a href="https://vk.com/club{vkwigets_g.VK_IDS}"><div class="vk_info_user"><div class="vk_info_user_photo">{vkwigets_g.VK_PHOTO}</div> <div class="vk_info">{vkwigets_g.VK_GRNAME}</div></div></a></div>
+	<!-- BEGINELSE -->
+		<div class="flex-item2">{L_NO_GR}</div>
+	<!-- END vkwigets_g -->
+	</div>
+</div>
+</div>
+</div>
+<!-- ENDIF -->

@@ -1,0 +1,17 @@
+imports:
+    - { resource: tables.yml }
+services:
+    deadromeo.vkfull.listener:
+        class: deadromeo\vkfull\event\listener
+        arguments:
+            - '@auth'
+            - '@config'
+            - '@dbal.conn'
+            - '@user'
+            - '@template'
+            - '@request'
+            - '%core.root_path%'
+            - '%deadromeo.vkfull.table.vk_postwall%'
+            - '%deadromeo.vkfull.table.vk_poll%'
+        tags:
+            - { name: event.listener }

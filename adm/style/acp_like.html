@@ -1,0 +1,92 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_VK_BB}<!-- IF VK_VERSION --> <span style="font-size:0.6em;">v. {VK_VERSION}</span><!-- ENDIF --> / <a href="http://hello-vitebsk.ru/viewtopic.php?f=208&t=2761">FAQ</a></h1>
+
+<form id="acp_like" method="post" action="{U_ACTION}">
+	<fieldset>
+		<legend>{L_VK_LIKE}</legend>
+<dl>
+			{L_VK_LIKE_EXP}
+			
+</dl>
+<dl>
+			<dt><label for="vkbb_like_on">{L_VK_LIKE_ON}</label><br /><span>{L_VK_LIKE_ON_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_like_on" value="1" id="vkbb_like_on"<!-- IF VKBB_LIKE_ON --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="vkbb_like_on" value="0" <!-- IF not VKBB_LIKE_ON --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+</dl>
+<dl>
+			<dt><label for="vkbb_like_h">{L_VK_LIKE_H}</label><br /><span>{L_VK_LIKE_H_EXP}</span></dt>
+			<dd><input type="number" list="hei" id="vkbb_like_h" name="vkbb_like_h" size="30" min="18" max="24" autocomplete="off" value="{VKBB_LIKE_H}" />
+			<datalist id="hei">
+    <option>18</option>
+    <option>20</option>
+    <option>22</option>
+    <option>24</option>
+   </datalist> 
+			</dd>
+</dl>
+<dl>
+			<dt><label for="vkbb_like_t">{L_VK_BB_TYPE_BUTTON}</label><br /><span>{L_VK_BB_TYPE_BUTTON_EXP}</span></dt>
+			<dd><input type="text" autocomplete="off"  list="type" id="vkbb_like_t" name="vkbb_like_t" size="30" value="{VKBB_LIKE_T}" />
+			<datalist id="type">
+    <option>button</option>
+    <option>full</option>
+    <option>mini</option>
+    <option>vertical</option>
+   </datalist> 
+			</dd>
+</dl>
+<dl>
+			<dt><label for="vkbb_like_f">{L_VK_LIKE_VER}</label><br /><span>{L_VK_LIKE_VER_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_like_f" value="1" id="vkbb_like_f"<!-- IF VKBB_LIKE_F --> checked="checked"<!-- ENDIF -->/> {L_VK_LIKE_VER_I}</label>
+				<label><input type="radio" class="radio" name="vkbb_like_f" value="0" <!-- IF not VKBB_LIKE_F --> checked="checked"<!-- ENDIF --> /> {L_VK_LIKE_VER_N}</label>
+			</dd>
+</dl>
+	</fieldset>
+	<fieldset>
+		<legend>{L_VK_COM_TOP}</legend>
+		<dl>
+			{L_VK_RUL}
+			</dl>
+<dl>
+			<dt><label for="vkbb_top_on_l">{L_VK_COM_TOP_O}</label><br /><span>{L_VK_COM_TOPL_O_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_top_on_l" value="1" id="vkbb_top_on_l"<!-- IF VKBB_TOP_ON_L --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="vkbb_top_on_l" value="0" <!-- IF not VKBB_TOP_ON_L --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+</dl> 
+<dl>
+			<dt><label for="vkbb_top_p_l">{L_VK_COM_TOP_PO}</label><br /><span>{L_VK_COM_TOP_PO_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_top_p_l" value="1" id="vkbb_top_p_l"<!-- IF VKBB_TOP_P_L --> checked="checked"<!-- ENDIF -->/> {L_VK_REC_P_B}</label>
+				<label><input type="radio" class="radio" name="vkbb_top_p_l" value="0" <!-- IF not VKBB_TOP_P_L --> checked="checked"<!-- ENDIF --> /> {L_VK_REC_P_A}</label>
+			</dd>
+</dl> 
+<dl>
+			<dt><label for="vkbb_top_d_l">{L_VK_COM_DAT}</label><br /><span>{L_VK_COM_DAT_EXP}</span></dt>
+			<dd><input type="text" list="datt" id="vkbb_top_d_l"  name="vkbb_top_d_l" size="30" autocomplete="off" value="{VKBB_TOP_D_L}" />
+			<datalist id="datt">
+    <option>day</option>
+    <option>week</option>
+    <option>month</option>
+    <option>alltime</option>
+   </datalist> </dd>
+</dl> 		
+<dl>
+			<dt><label for="vkbb_top_k_l">{L_VK_COM_NUMB}</label><br /><span>{L_VK_COM_NUMB_EXP}</span></dt>
+			<dd><input type="number" id="vkbb_top_k_l" min="10" max="200" name="vkbb_top_k_l" size="30" value="{VKBB_TOP_K_L}" /></dd>
+</dl>
+</fieldset>
+	<fieldset>
+		<legend>{L_ACP_SUBMIT_CHANGES}</legend>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+<!-- INCLUDE overall_footer.html -->

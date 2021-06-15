@@ -1,0 +1,62 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_VK_BB}<!-- IF VK_VERSION --> <span style="font-size:0.6em;">v. {VK_VERSION}</span><!-- ENDIF --> / <a href="http://hello-vitebsk.ru/viewtopic.php?f=208&t=2761">FAQ</a></h1>
+
+<form id="acp_live" method="post" action="{U_ACTION}">
+	<fieldset>
+		<legend>{L_VK_SAVE}</legend>
+		<dl>
+			{L_VK_SAVE_EXP}
+			</dl>
+<dl>
+			<dt><label for="vkbb_save_on">{L_VK_SAVE_ON}</label><br /><span>{L_VK_SAVE_ON_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_save_on" value="1" id="vkbb_save_on"<!-- IF VKBB_SAVE_ON --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="vkbb_save_on" value="0" <!-- IF not VKBB_SAVE_ON --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+</dl>
+<dl>
+			<dt><label for="vkbb_save_p">{L_VK_SAVE_P}</label><br /><span>{L_VK_SAVE_P_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_save_p" value="1" id="vkbb_save_p"<!-- IF VKBB_SAVE_P --> checked="checked"<!-- ENDIF -->/> {L_VK_SAVE_L}</label>
+				<label><input type="radio" class="radio" name="vkbb_save_p" value="0" <!-- IF not VKBB_SAVE_P --> checked="checked"<!-- ENDIF --> /> {L_VK_SAVE_R}</label>
+			</dd>
+</dl> 
+<dl>
+			<dt><label for="save_style">{L_VK_SAVE_STYLE}</label><br /><span>{L_VK_SAVE_STYLE_EXP}</span></dt>
+			<dd><input type="text" list="style" id="save_style" maxlength="255" name="save_style" size="30" autocomplete="off" value="{SAVE_STYLE}" />
+			<datalist id="style">
+    <option>link</option>
+    <option>link_noicon</option>
+    <option>round</option>
+	<option>round_nocount</option>
+	<option>custom</option>
+   </datalist> 
+   </dd>
+</dl> 
+<dl>
+			<dt><label for="save_text">{L_VK_SAVE_TEXT}</label><br /><span>{L_VK_SAVE_TEXT_EXP}</span></dt>
+			<dd><input type="text" id="save_text" maxlength="255" name="save_text" size="30" value="{SAVE_TEXT}" /></dd>
+</dl>
+<dl>
+			<dt><label for="vkbb_save_l">{L_VK_SAVE_L_ON}</label><br /><span>{L_VK_SAVE_L_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_save_l" value="1" id="vkbb_save_l"<!-- IF VKBB_SAVE_L --> checked="checked"<!-- ENDIF -->/> {L_ONE}</label>
+				<label><input type="radio" class="radio" name="vkbb_save_l" value="0" <!-- IF not VKBB_SAVE_L --> checked="checked"<!-- ENDIF --> /> {L_TWO}</label>
+			</dd>
+</dl>	
+<dl>
+			<dt><label for="vkbb_save_lt">{L_VK_SAVE_LT}</label><br /><span>{L_VK_SAVE_LT_EXP}</span></dt>
+			<dd><input type="text" id="vkbb_save_lt" maxlength="255" name="vkbb_save_lt" size="30" value="{VKBB_SAVE_LT}" /></dd>
+</dl>			
+	</fieldset>
+	<fieldset>
+		<legend>{L_ACP_SUBMIT_CHANGES}</legend>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+<!-- INCLUDE overall_footer.html -->

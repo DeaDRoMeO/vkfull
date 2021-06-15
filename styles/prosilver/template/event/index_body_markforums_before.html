@@ -1,0 +1,37 @@
+<!-- IF VKBB_DISPLAY -->
+<!-- IF VKBB_WALL_ON and S_DISPLAY_WALL and VKBB_WALL_P -->
+<!-- INCLUDE vk_wall.html -->
+<!-- ENDIF -->
+
+<!-- IF VKBB_POLL_ON and S_DISPLAY_POLL and VKBB_POLL_P -->
+<!-- INCLUDE vk_poll.html -->
+<!-- ENDIF -->
+
+<!-- IF VKBB_REC_ON and S_DISPLAY_REC and VKBB_REC_P -->
+<!-- INCLUDE vk_rec.html -->
+<!-- ENDIF -->
+
+<!-- IF VKBB_SOC_ON and S_DISPLAY_SOC and VKBB_SOC_P -->
+<!-- INCLUDE vk_soc.html -->
+<!-- ENDIF -->
+
+<!-- IF VKBB_COM_ON and S_DISPLAY_COM and VKBB_COM_I_P and VKBB_COM_ON_I -->
+<!-- INCLUDE vk_com_all_i.html -->
+<!-- ENDIF -->
+<div class="flex-container">
+<!-- IF VKBB_LIKE_DISPLAY and VKBB_TOP_ON_L and S_DISPLAY_TOPLIK and VKBB_TOP_P_L -->
+<div class="flex-item">
+<!-- INCLUDE vk_top_like_i.html -->
+</div>
+<!-- ENDIF -->
+<!-- IF VKBB_COM_ON and VKBB_TOP_ON_C and S_DISPLAY_TOPCOM and VKBB_TOP_P_C -->
+<div class="flex-item">
+<!-- INCLUDE vk_top_com_i.html -->
+</div>
+<!-- ENDIF -->
+</div>
+<!-- IF VKBB_USERS_ON and S_DISPLAY_USERS and VKBB_USERS_P -->
+<!-- INCLUDE vk_users.html -->
+<!-- ENDIF -->
+<!-- ENDIF -->
+

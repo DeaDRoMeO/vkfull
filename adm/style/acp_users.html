@@ -1,0 +1,35 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_VK_BB}<!-- IF VK_VERSION --> <span style="font-size:0.6em;">v. {VK_VERSION}</span><!-- ENDIF --> / <a href="http://hello-vitebsk.ru/viewtopic.php?f=208&t=2761">FAQ</a></h1>
+
+<form id="acp_users" method="post" action="{U_ACTION}">
+	<fieldset>
+		<legend>{L_VK_USERS}</legend>
+		<dl>
+			{L_VK_USERS_EXP}<br/>{L_VK_RUL}
+			</dl>	
+			<dl>
+			<dt><label for="vkbb_users_on">{L_VK_USERS_ON}</label><br /><span>{L_VK_USERS_ON_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_users_on" value="1" id="vkbb_users_on"<!-- IF VKBB_USERS_ON --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="vkbb_users_on" value="0" <!-- IF not VKBB_USERS_ON --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+</dl>
+<dl>
+			<dt><label for="vkbb_users_p">{L_VK_USERS_P}</label><br /><span>{L_VK_USERS_P_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_users_p" value="1" id="vkbb_users_p"<!-- IF VKBB_USERS_P --> checked="checked"<!-- ENDIF -->/> {L_VK_REC_P_B}</label>
+				<label><input type="radio" class="radio" name="vkbb_users_p" value="0" <!-- IF not VKBB_USERS_P --> checked="checked"<!-- ENDIF --> /> {L_VK_REC_P_A}</label>
+			</dd>
+</dl>					
+	</fieldset>
+	<fieldset>
+		<legend>{L_ACP_SUBMIT_CHANGES}</legend>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+<!-- INCLUDE overall_footer.html -->

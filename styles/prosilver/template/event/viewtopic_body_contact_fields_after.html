@@ -1,0 +1,26 @@
+
+		
+<!-- IF GLOB_ID != postrow.POSTER_ID and GLOB_ID != 1 -->
+<!-- IF postrow.PROFILE_VKBB_PROFILE_VALUE  -->
+<div style="display: inline-block;"  class="dropdown-container dropdown-container-{S_CONTENT_FLOW_BEGIN} dropdown-up dropdown-{S_CONTENT_FLOW_END} dropdown-button-control" id="quickmod">
+			<span title="{L_FOLLOW_S}" class="dropdown-trigger button  dropdown-select"><img src="./ext/deadromeo/vkfull/images/follo.png"/></span>
+			<div class="dropdown hidden">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents">
+				<li>
+				<!-- IF postrow.PROFILE_VKBB_PROFILE_VALUE and VKBB_DISPLAY -->
+				<dl>
+					<dt><strong>{L_VKON}</strong></dt>
+					<dd>
+<dd class="profile-rank" style="padding-top:3px;"><div id="vk_subscribe {postrow.POST_ID}"></div></dd>
+<script type="text/javascript">
+VK.Widgets.Subscribe("vk_subscribe {postrow.POST_ID}", {soft:1}, {postrow.PROFILE_VKBB_PROFILE_VALUE});
+</script>
+</dd>
+				</dl>
+				<!-- ENDIF -->
+				</li>
+				</ul>
+			</div>
+		</div>
+	<!-- ENDIF -->	<!-- ENDIF -->

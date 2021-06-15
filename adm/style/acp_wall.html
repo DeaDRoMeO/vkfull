@@ -1,0 +1,180 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_VK_BB}<!-- IF VK_VERSION --> <span style="font-size:0.6em;">v. {VK_VERSION}</span><!-- ENDIF --> / <a href="http://hello-vitebsk.ru/viewtopic.php?f=208&t=2761">FAQ</a></h1>
+<!-- IF S_QC_LIST -->
+<form id="acp_wall" method="post" action="{U_ACTION}">
+
+			<fieldset>
+		<legend>{L_VK_WALL}</legend>
+		<dl>
+			{L_VK_WALL_EXP}<br/>{L_VK_RUL}
+			</dl>	
+			<dl>
+			<dt><label for="vkbb_wall_on">{L_VK_WALL_ON}</label><br /><span>{L_VK_WALL_ON_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_wall_on" value="1" id="vkbb_wall_on"<!-- IF VKBB_WALL_ON --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="vkbb_wall_on" value="0" <!-- IF not VKBB_WALL_ON --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+</dl>
+<dl>
+			<dt><label for="vkbb_wall_p">{L_VK_WALL_P}</label><br /><span>{L_VK_WALL_P_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_wall_p" value="1" id="vkbb_wall_p"<!-- IF VKBB_WALL_P --> checked="checked"<!-- ENDIF -->/> {L_VK_REC_P_B}</label>
+				<label><input type="radio" class="radio" name="vkbb_wall_p" value="0" <!-- IF not VKBB_WALL_P --> checked="checked"<!-- ENDIF --> /> {L_VK_REC_P_A}</label>
+			</dd>
+</dl>
+	</fieldset>
+	<fieldset>
+		<legend>{L_ACP_SUBMIT_CHANGES}</legend>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit3" name="submit3" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+		{S_FORM_TOKEN}
+	</fieldset>
+	</form>
+	<div class="pagination">
+   {TOTAL_POSTWALL} &bull; 
+   <!-- IF .pagination -->
+      <!-- INCLUDE pagination.html -->
+   <!-- ELSE -->
+       {PAGE_NUMBER}
+   <!-- ENDIF -->
+</div>
+		<table>
+		<thead>
+			<tr>
+				<th style="text-align: center;">{L_POSTWALL_ID}</th>
+				<th style="text-align: center;">{L_WALLNAME}</th>
+				<th style="text-align: center;">{L_DISPLAY_L}</th>
+				<th style="text-align: center;">{L_ACTION}</th>
+			</tr>
+		</thead>
+		<tbody>
+		<!-- BEGIN postwall -->
+			<!-- IF postwall.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+			<td style="text-align: center;" width="10%">{postwall.ID}</td>
+			<td style="text-align: center;" width="75%">{postwall.NAME} </td>
+			<td style="text-align: center;" width="75%">{postwall.DISPLAY} </td>
+			<td style="text-align: center;" width="15%">&nbsp;<a href="{postwall.U_EDIT}">{ICON_EDIT}</a> <a href="{postwall.U_DEL}">{ICON_DELETE}</a>&nbsp;</td>
+		</tr>
+		<!-- BEGINELSE -->
+			<tr>
+				<td colspan="4">{L_NO_POSTWALL}</td>
+			</tr>
+		<!-- END postwall -->
+		</tbody>
+	</table>
+	<div class="pagination">
+   {TOTAL_POSTWALL} &bull; 
+   <!-- IF .pagination -->
+      <!-- INCLUDE pagination.html -->
+   <!-- ELSE -->
+       {PAGE_NUMBER}
+   <!-- ENDIF -->
+</div>
+
+<form id="add_quote" method="post" action="{S_ACTION}">
+		<fieldset class="tabulated">
+			<input type="hidden" name="action" value="add_quote" />
+			<input class="button2" name="add_quote" type="submit" value="{L_POSTWALL_ADD}" />
+			{S_FORM_TOKEN}
+		</fieldset>
+		</form>
+	<!-- ENDIF -->
+	<!-- IF S_QC_ADD -->
+<form method="post" action="{U_ACTION}">
+	<p>
+		<input type="hidden" name="add_new" value="add_new" />
+	</p>
+	<fieldset>
+		<!-- IF S_QC_EDIT -->
+			<legend>{L_POSTWALL_EDIT}</legend>
+		<!-- ELSE -->
+			<legend>{L_POSTWALL_ADD}</legend>
+		<!-- ENDIF -->
+		<dl>
+			<dt><label for="name">{L_WALLNAME}</label><br /><span>{L_WALLNAME_EXP}</span></dt>
+			<dd><input type="text" id="name" required  name="name" size="30" value="{NAME}" /></dd>
+</dl> 	
+		<dl>
+			<dt><label for="element_id">{L_VK_WALL_ID}</label><br /><span>{L_VK_WALL_ID_EXP}</span></dt>
+			<dd><input type="text" id="element_id" required  name="element_id" size="30" value="{ELEMENT_ID}" /></dd>
+</dl> 	
+<dl>
+			<dt><label for="owner_id">{L_VK_WALL_ID1}</label><br /><span>{L_VK_WALL_ID1_EXP}</span></dt>
+			<dd><input type="text" id="owner_id" required  name="owner_id" size="30" value="{OWNER_ID}" /></dd>
+</dl> 	
+<dl>
+			<dt><label for="post_id">{L_VK_WALL_IDPOST}</label><br /><span>{L_VK_WALL_IDPOST_EXP}</span></dt>
+			<dd><input type="text" id="post_id"  required name="post_id" size="30" value="{POST_ID}" /></dd>
+</dl>
+<dl>
+			<dt><label for="hash">{L_VK_HASH}</label><br /><span>{L_VK_HASH_EXP}</span></dt>
+			<dd><input type="text" id="hash" required  name="hash" size="30" value="{HASH}" /></dd>
+</dl>		
+<dl>
+			<dt><label for="display">{L_DISPLAY_L}</label><br /><span>{L_DISPLAY_L_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="display" value="1" id="display"<!-- IF DISPLAY --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="display" value="0" <!-- IF not DISPLAY --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+</dl>		
+	</fieldset>
+	<fieldset class="submit-buttons">
+		<legend>{L_SUBMIT}</legend>
+		<input class="button1" id="submit" name="submit" value="{L_SUBMIT}" type="submit" />&nbsp;
+		<input class="button2" id="reset" name="reset" value="{L_RESET}" type="reset" />
+	</fieldset>
+</form>
+<!-- ENDIF -->
+
+<!-- IF S_QC_EDIT -->
+<form method="post" action="{U_ACTION}">
+
+	<p>
+		<input type="hidden" name="id" value="{ID}" />
+	</p>
+	<fieldset>
+		<!-- IF S_QC_EDIT -->
+			<legend>{L_POSTWALL_EDIT}</legend>
+		<!-- ELSE -->
+			<legend>{L_POSTWALL_ADD}</legend>
+		<!-- ENDIF -->
+<dl>
+			<dt><label for="name">{L_WALLNAME}</label><br /><span>{L_WALLNAME_EXP}</span></dt>
+			<dd><input type="text" id="name" required name="name" size="30" value="{NAME}" /></dd>
+</dl> 	
+		<dl>
+			<dt><label for="element_id">{L_VK_WALL_ID}</label><br /><span>{L_VK_WALL_ID_EXP}</span></dt>
+			<dd><input type="text" id="element_id" required name="element_id" size="30" value="{ELEMENT_ID}" /></dd>
+</dl> 	
+<dl>
+			<dt><label for="owner_id">{L_VK_WALL_ID1}</label><br /><span>{L_VK_WALL_ID1_EXP}</span></dt>
+			<dd><input type="text" id="owner_id" required name="owner_id" size="30" value="{OWNER_ID}" /></dd>
+</dl> 	
+<dl>
+			<dt><label for="post_id">{L_VK_WALL_IDPOST}</label><br /><span>{L_VK_WALL_IDPOST_EXP}</span></dt>
+			<dd><input type="text" id="post_id" required name="post_id" size="30" value="{POST_ID}" /></dd>
+</dl>
+<dl>
+			<dt><label for="hash">{L_VK_HASH}</label><br /><span>{L_VK_HASH_EXP}</span></dt>
+			<dd><input type="text" id="hash" required name="hash" size="30" value="{HASH}" /></dd>
+</dl>
+<dl>
+			<dt><label for="display">{L_DISPLAY_L}</label><br /><span>{L_DISPLAY_L_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="display" value="1" id="display"<!-- IF DISPLAY --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="display" value="0" <!-- IF not DISPLAY --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+</dl>				
+	</fieldset>
+	<fieldset class="submit-buttons">
+		<legend>{L_SUBMIT}</legend>
+		<input class="button1" id="submit" name="submit" value="{L_SUBMIT}" type="submit" />&nbsp;
+		<input class="button2" id="reset" name="reset" value="{L_RESET}" type="reset" />
+	</fieldset>
+</form>
+<!-- ENDIF -->
+	
+<!-- INCLUDE overall_footer.html -->

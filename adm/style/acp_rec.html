@@ -1,0 +1,69 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_VK_BB}<!-- IF VK_VERSION --> <span style="font-size:0.6em;">v. {VK_VERSION}</span><!-- ENDIF --> / <a href="http://hello-vitebsk.ru/viewtopic.php?f=208&t=2761">FAQ</a></h1>
+
+<form id="acp_rec" method="post" action="{U_ACTION}">
+	<fieldset>
+		<legend>{L_VK_REC}</legend>
+<dl>
+			{L_VK_REC_EXP}<br/>{L_VK_RUL}</dl>
+<dl>
+			<dt><label for="vkbb_rec_on">{L_VK_REC_ON}</label><br /><span>{L_VK_REC_ON_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_rec_on" value="1" id="vkbb_rec_on"<!-- IF VKBB_REC_ON --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="vkbb_rec_on" value="0" <!-- IF not VKBB_REC_ON --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+</dl>
+<dl>
+			<dt><label for="vkbb_rec_p">{L_VK_REC_P}</label><br /><span>{L_VK_REC_P_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_rec_p" value="1" id="vkbb_rec_p"<!-- IF VKBB_REC_P --> checked="checked"<!-- ENDIF -->/> {L_VK_REC_P_B}</label>
+				<label><input type="radio" class="radio" name="vkbb_rec_p" value="0" <!-- IF not VKBB_REC_P --> checked="checked"<!-- ENDIF --> /> {L_VK_REC_P_A}</label>
+			</dd>
+</dl>
+<dl>
+			<dt><label for="vkbb_rec_mp">{L_VK_REC_MP}</label><br /><span>{L_VK_REC_MP_EXP}</span></dt>
+			<dd><input type="number" id="vkbb_rec_mp" name="vkbb_rec_mp" min="1" size="30" value="{VKBB_REC_MP}" /></dd>
+</dl>
+<dl>
+			<dt><label for="vkbb_rec_mpm">{L_VK_REC_MPM}</label><br /><span>{L_VK_REC_MPM_EXP}</span></dt>
+			<dd><input type="number" id="vkbb_rec_mpm" name="vkbb_rec_mpm" min="1" size="30" value="{VKBB_REC_MPM}" /></dd>
+</dl>  
+<dl>
+			<dt><label for="vkbb_rec_per">{L_VK_REC_PER}</label><br /><span>{L_VK_REC_PER_EXP}</span></dt>
+			<dd><input type="text" list="period" id="vkbb_rec_per" name="vkbb_rec_per" autocomplete="off" size="30" value="{VKBB_REC_PER}" />
+			<datalist id="period">
+    <option>day</option>
+    <option>week</option>
+    <option>month</option>
+   </datalist> 
+			</dd>
+</dl>  
+<dl>
+			<dt><label for="vkbb_rec_ver">{L_VK_REC_VER}</label><br /><span>{L_VK_REC_VER_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_rec_ver" value="1" id="vkbb_rec_ver"<!-- IF VKBB_REC_VER --> checked="checked"<!-- ENDIF -->/> {L_VK_REC_VER_I}</label>
+				<label><input type="radio" class="radio" name="vkbb_rec_ver" value="0" <!-- IF not VKBB_REC_VER --> checked="checked"<!-- ENDIF --> /> {L_VK_REC_VER_N}</label>
+			</dd>
+</dl>
+<dl>
+			<dt><label for="vkbb_rec_targ">{L_VK_REC_TARG}</label><br /><span>{L_VK_REC_TARG_EXP}</span></dt>
+			<dd><input type="text" list="target_rec" id="vkbb_rec_targ" name="vkbb_rec_targ" size="30" autocomplete="off" value="{VKBB_REC_TARG}" />
+			<datalist id="target_rec">
+    <option>blank</option>
+    <option>top</option>
+    <option>parent</option>
+   </datalist> 
+			</dd>
+</dl>  
+		</fieldset>
+	<fieldset>
+		<legend>{L_ACP_SUBMIT_CHANGES}</legend>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+<!-- INCLUDE overall_footer.html -->

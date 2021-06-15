@@ -1,0 +1,19 @@
+<!-- IF VKBB_DISPLAY and VKBB_COM_ON and S_DISPLAY_COM -->
+
+	<div class="panel">
+		<div class="inner">
+			<ul class="tabs__caption">
+
+				<li style="display: inline-block;" class="active"><h2 class="quickreply-title"><a name="vk_com_t">{L_VK_COML}</a></h2></li>
+
+			</ul>
+
+			<div class="tabs__content  active">
+				<div id="vk_comments" ></div>
+				<script type="text/javascript">VK.Widgets.Comments("vk_comments", {height: {VKBB_COM_H} ,limit: {VKBB_COM_K}, attach: "*", mini: 1}, {TOPIC_ID});</script>		
+			</div>
+
+		</div>
+	</div>
+
+<!-- ENDIF -->

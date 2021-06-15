@@ -1,0 +1,56 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_VK_BB}<!-- IF VK_VERSION --> <span style="font-size:0.6em;">v. {VK_VERSION}</span><!-- ENDIF --> / <a href="http://hello-vitebsk.ru/viewtopic.php?f=208&t=2761">FAQ</a></h1>
+
+<form id="acp_vkfull" method="post" action="{U_ACTION}">
+<fieldset>
+		<legend>{L_VK_INFO_VK}</legend>
+	
+<dl>
+			<dt>{L_VK_INFO_NAME}</dt>
+			<dd>
+{VKV_NAME}
+			</dd>
+</dl>
+<dl>
+			<dt>{L_VK_INFO_AVA}</dt>
+			<dd>
+{VKV_LOGO}
+			</dd>
+</dl>
+
+<dl>
+			<dt>{L_VK_INFO_AUTHOR}</dt>
+			<dd>
+{VKV_TYPE}
+			</dd>
+</dl>
+</fieldset>
+	<fieldset>
+		<legend>{L_VK_BB_ON}</legend>
+		<dl>
+			<dt><label for="vkbb_on">{L_VK_BB_ON_EXP}</label><br /><span>{L_VK_BB_ON_EXP1}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_on" value="1" id="vkbb_on"<!-- IF VKBB_ON --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="vkbb_on" value="0" <!-- IF not VKBB_ON --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="vk_id">{L_VK_ID}</label><br /><span>{L_VK_ID_EXP}</span></dt>
+			<dd><input type="text" id="vk_id" name="vk_id" size="50" value="{VK_ID}" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="vk_token">{L_VK_TOKEN}</label><br /><span>{L_VK_TOKEN_EXP}</span></dt>
+			<dd><input type="text" id="vk_token" name="vk_token" size="50" value="{VK_TOKEN}" /></dd>
+		</dl>
+	</fieldset>
+	<fieldset>
+		<legend>{L_ACP_SUBMIT_CHANGES}</legend>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+<!-- INCLUDE overall_footer.html -->

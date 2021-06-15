@@ -1,0 +1,72 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_VK_BB}<!-- IF VK_VERSION --> <span style="font-size:0.6em;">v. {VK_VERSION}</span><!-- ENDIF --> / <a href="http://hello-vitebsk.ru/viewtopic.php?f=208&t=2761">FAQ</a></h1>
+
+<form id="acp_soc" method="post" action="{U_ACTION}">
+		<fieldset>
+		<legend>{L_VK_SOC}</legend>
+<dl>
+			{L_VK_SOC_EXP}<br/>{L_VK_RUL}
+</dl>
+<dl>
+			<dt><label for="vkbb_soc_on">{L_VK_SOC_ON}</label><br /><span>{L_VK_SOC_ON_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_soc_on" value="1" id="vkbb_soc_on"<!-- IF VKBB_SOC_ON --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="vkbb_soc_on" value="0" <!-- IF not VKBB_SOC_ON --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+</dl>
+<dl>
+			<dt><label for="vkbb_soc_p">{L_VK_SOC_P}</label><br /><span>{L_VK_SOC_P_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_soc_p" value="1" id="vkbb_soc_p"<!-- IF VKBB_SOC_P --> checked="checked"<!-- ENDIF -->/> {L_VK_REC_P_B}</label>
+				<label><input type="radio" class="radio" name="vkbb_soc_p" value="0" <!-- IF not VKBB_SOC_P --> checked="checked"<!-- ENDIF --> /> {L_VK_REC_P_A}</label>
+			</dd>
+</dl>
+<dl>
+			<dt><label for="vkbb_soc_id">{L_VK_SOC_ID}</label><br /><span>{L_VK_SOC_ID_EXP}</span></dt>
+			<dd><input type="number" id="vkbb_soc_id" name="vkbb_soc_id" size="30" value="{VKBB_SOC_ID}" /></dd>
+</dl>  		
+<dl>
+			<dt><label for="vkbb_soc_h">{L_VK_SOC_H}</label><br /><span>{L_VK_SOC_H_EXP}</span></dt>
+			<dd><input type="number" id="vkbb_soc_h" min="200" max="1200" name="vkbb_soc_h" size="30" value="{VKBB_SOC_H}" /></dd>
+</dl> 
+<dl>
+			<dt><label for="vkbb_soc_m">{L_VK_SOC_M}</label><br /><span>{L_VK_SOC_M_EXP}</span></dt>
+			<dd><input type="number" id="vkbb_soc_m" list="type_soc" min="0" max="2" autocomplete="off" name="vkbb_soc_m" size="30" value="{VKBB_SOC_M}" />
+			<datalist id="type_soc">
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+   </datalist> 
+			</dd>
+</dl> 
+<dl>
+			<dt><label for="vkbb_soc_mw">{L_VK_SOC_MW}</label><br /><span>{L_VK_SOC_MW_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="vkbb_soc_mw" value="1" id="vkbb_soc_mw"<!-- IF VKBB_SOC_MW --> checked="checked"<!-- ENDIF -->/> {L_VK_SOC_MW_A}</label>
+				<label><input type="radio" class="radio" name="vkbb_soc_mw" value="0" <!-- IF not VKBB_SOC_MW --> checked="checked"<!-- ENDIF --> /> {L_VK_SOC_MW_S}</label>
+			</dd>
+</dl>
+<dl>
+			<dt><label for="vkbb_soc_c_a">{L_VK_SOC_C_A}</label><br /><span>{L_VK_SOC_C_A_EXP}</span></dt>
+			<dd><input type="text" id="vkbb_soc_c_a" name="vkbb_soc_c_a" size="30" value="{VKBB_SOC_C_A}" /></dd>
+</dl> 
+<dl>
+			<dt><label for="vkbb_soc_c_b">{L_VK_SOC_C_B}</label><br /><span>{L_VK_SOC_C_B_EXP}</span></dt>
+			<dd><input type="text" id="vkbb_soc_c_b" name="vkbb_soc_c_b" size="30" value="{VKBB_SOC_C_B}" /></dd>
+</dl> 
+<dl>
+			<dt><label for="vkbb_soc_c_c">{L_VK_SOC_C_C}</label><br /><span>{L_VK_SOC_C_C_EXP}</span></dt>
+			<dd><input type="text" id="vkbb_soc_c_c" name="vkbb_soc_c_c" size="30" value="{VKBB_SOC_C_C}" /></dd>
+</dl> 
+	</fieldset>
+	<fieldset>
+		<legend>{L_ACP_SUBMIT_CHANGES}</legend>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+<!-- INCLUDE overall_footer.html -->

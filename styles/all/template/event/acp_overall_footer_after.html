@@ -1,0 +1,21 @@
+<!-- INCLUDEJS jquery.js -->
+<!-- INCLUDEJS colorpicker.js -->
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$('#vkbb_soc_c_a, #vkbb_soc_c_b, #vkbb_soc_c_c').ColorPicker({
+	onSubmit: function(hsb, hex, rgb, el) {
+		$(el).val(hex);
+		$(el).ColorPickerHide();
+	},
+	onBeforeShow: function () {
+		$(this).ColorPickerSetColor(this.value);
+	}
+})
+.bind('keyup', function(){
+	$(this).ColorPickerSetColor(this.value);
+
+	});
+	
+});
+</script>

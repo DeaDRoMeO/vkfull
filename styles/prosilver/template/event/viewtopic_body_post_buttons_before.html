@@ -1,0 +1,18 @@
+<!-- IF VKBB_LIKE_DISPLAY and VKBB_DISPLAY -->
+<li>
+<div style="display: inline-block; margin-left: 7px;" class="dropdown-container dropdown-container-{S_CONTENT_FLOW_BEGIN} dropdown-up dropdown-{S_CONTENT_FLOW_END} dropdown-button-control" id="quickmod">
+			<span title="{L_LIKE_S}" class="dropdown-trigger button  dropdown-select"><img src="./ext/deadromeo/vkfull/images/lik.png"/></span>
+		<div class="dropdown hidden">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents">
+				<li>
+				<div style="{LIKE_STYLE}"  id="vk_like-{postrow.POST_ID}9"></div>
+<script type="text/javascript">
+VK.Widgets.Like("vk_like-{postrow.POST_ID}9", {type: "{VKBB_LIKE_T}", height:"{VKBB_LIKE_H}", verb:"<!-- IF VKBB_LIKE_F -->1<!-- ELSE -->0<!-- ENDIF -->", pageDescription: '{postrow.MESS}', pageTitle: '{L_VK_IM}«{TOPIC_TITLE}»{L_VK_IU}{postrow.POST_AUTHOR}', pageUrl: "{BOARD_URL}viewtopic.php?p={postrow.POST_ID}#p{postrow.POST_ID}"},{postrow.POST_ID}9);
+</script>
+				</li>
+				</ul>
+			</div>
+		</div>
+		</li>
+		<!-- ENDIF -->

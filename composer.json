@@ -1,0 +1,25 @@
+{
+	"name": "deadromeo/vkfull",
+	"type": "phpbb-extension",
+	"description": "Расширение добавляет на ваш форум множество виджетов от Вконтакте: Комментарии, Мне нравится, Рекомендации, Сообщества, Опросы, Запись на стене",
+	"homepage": "http://hello-vitebsk.ru/viewtopic.php?f=208&t=2761",
+	"version": "1.1.4",
+	"time": "2020-12-04",
+	"license": "GPL-2.0",
+		"authors": [{
+			"name": "DeaDRoMeO",
+			"homepage": "http://hello-vitebsk.ru",
+			"role": "Developer"
+		}],
+	"require": {
+		"php": ">=5.3.3",
+		"phpbb/phpbb": ">=3.3.0"
+	},
+	"extra": {
+		"display-name": "VKWigets",
+		"soft-require": {
+         "phpbb/phpbb": ">=3.3.0"
+		 }
+	}
+}
+
